@@ -1,12 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 
-
+const Container = styled.div``;
 
 const IndexKontak = () => {
     return (
-        <div>
+        <Container>
             1
-        </div>
+        </Container>
     )
 }
 
