@@ -2,11 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div``;
+const Title = styled.h4``;
+
 
 const IndexKontak = () => {
     return (
         <Container>
-            1
+            <Title>
+                list kontak
+            </Title>
         </Container>
     )
 }
