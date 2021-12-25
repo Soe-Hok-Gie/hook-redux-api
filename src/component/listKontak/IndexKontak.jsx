@@ -12,7 +12,7 @@ const IndexKontak = () => {
 
     useEffect(() => {
     //panggil action getListcontak
-    // dispatch(getListKontak()); 
+    dispatch(getListKontak()); 
 
 
      }, [])
