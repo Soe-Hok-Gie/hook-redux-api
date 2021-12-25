@@ -20,4 +20,15 @@ export const getListKontak = () =>{
             url:'http://localhost:3000/kontaks',
             timeout:12000
         })
+        .then((respone)=>{
+            //berhasil
+            dispatch({
+                type:GET_LIST_KONTAK,
+                payload:{
+                    loading:true,
+                    data:respone.data,
+                    errorMessage:false
+                }
+            })
+        })
 }}
