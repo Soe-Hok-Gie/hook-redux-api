@@ -22,6 +22,7 @@ export const getListKontak = () =>{
             timeout:12000
         })
         .then((respone)=>{
+            console.log ("3. berhasil",respone);
             //berhasil
             dispatch({
                 type:GET_LIST_KONTAK,
