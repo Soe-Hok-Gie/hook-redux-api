@@ -12,6 +12,7 @@ const App = () => {
         aplikasi kontak App
       </Title>
       <IndexKontak/>
+      
     </Container>
   )
 }
