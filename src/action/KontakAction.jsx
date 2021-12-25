@@ -13,6 +13,11 @@ export const getListKontak = () =>{
                 data:false,
                 errorMessage:false
             }
-
     })
+        //get Api
+        axios ({
+            method:'get',
+            url:'http://localhost:3000/kontaks',
+            timeout:12000
+        })
 }}
