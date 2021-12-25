@@ -14,7 +14,9 @@ const IndexKontak = () => {
 
 
     useEffect(() => {
+
     //panggil action getListcontak
+    console.log("1. useEffect component DId Mount")
     dispatch(getListKontak()); 
 
 
