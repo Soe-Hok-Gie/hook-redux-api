@@ -34,6 +34,8 @@ export const getListKontak = () =>{
             })
         })
         .catch((error)=>{
+            console.log ("3. gagal",error);
+
             //gagal
             dispatch({
                 type:GET_LIST_KONTAK,
