@@ -18,7 +18,7 @@ const IndexKontak = () => {
     dispatch(getListKontak()); 
 
 
-     }, [])
+     },[dispatch])
 
     return (
         <Container>
