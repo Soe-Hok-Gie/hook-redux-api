@@ -31,4 +31,16 @@ export const getListKontak = () =>{
                 }
             })
         })
-}}
+        .catch((error)=>{
+            //gagal
+            dispatch({
+                type:GET_LIST_KONTAK,
+                payload:{
+                    loading:false,
+                    data:false,
+                    errorMessage:error.message
+                }
+            })
+        })
+    }
+}
