@@ -7,9 +7,15 @@ const Title = styled.h4``;
 
 const IndexKontak = () => {
 
- useEffect(() => {
-     
- }, [])
+    const dispatch = useDispatch()
+
+
+    useEffect(() => {
+    //panggil action getListcontak
+    dispatch(getListKontak()); 
+
+
+     }, [dispatch])
 
     return (
         <Container>
