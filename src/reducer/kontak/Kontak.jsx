@@ -1,6 +1,9 @@
 import {GET_LIST_KONTAK} from '../../action/KontakAction'
 
 const initialState ={
+    getListKontakResult : false,
+    getListKontakLoading : false,
+    getListKontakError : false
 
 }
 
