@@ -1,3 +1,5 @@
+import {GET_LIST_KONTAK} from '../../action/KontakAction'
+
 const initialState ={
 
 }
