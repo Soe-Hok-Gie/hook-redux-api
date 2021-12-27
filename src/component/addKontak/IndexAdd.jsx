@@ -1,5 +1,7 @@
 import React , { useState }from 'react'
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
+
 
 const Container = styled.div``;
 const Title = styled.h4``;
@@ -12,6 +14,8 @@ const IndexAdd = () => {
     const [nama, setNama] = useState("");
     const [nohp, setNohp] = useState("");
 
+    const dispatch = useDispatch();
+
     // const onChangeNama = (e) => {
     //     const nama= e.target.value;
     //     setNama(nama);
@@ -23,7 +27,11 @@ const IndexAdd = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        dispatch (addKontak({nama: nama, nohp : nohp}))
      }
+
+
     return (
         <Container>
             {/* <Title>Add Kontak</Title>
