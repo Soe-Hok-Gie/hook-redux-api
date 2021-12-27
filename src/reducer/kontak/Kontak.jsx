@@ -14,7 +14,7 @@ const kontak = ( state =initialState, action) =>{
                 ...state,
                 getListKontakResult: action.payload.data,
                 getListKontakLoading: action.payload.loading,
-                getListKontakError : action.payload.errorMessage
+                getListKontakError : action.payload.errormessage
             }
         default:
             return state;
