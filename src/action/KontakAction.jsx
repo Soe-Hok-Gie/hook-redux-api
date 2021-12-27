@@ -6,7 +6,7 @@ export const ADD_KONTAK = "ADD_KONTAK";
 
 
 export const getListKontak = () =>{
-    console.log("2. masuk action")
+    // console.log("2. masuk action")
     return(dispatch) =>{
 
             //loading
@@ -20,12 +20,12 @@ export const getListKontak = () =>{
     })
         //get Api
         axios ({
-            method:'get',
+            method:'GET',
             url:'http://localhost:3000/kontaks',
             timeout:12000
         })
         .then((respone)=>{
-            console.log ("3. berhasil",respone.data);
+            // console.log ("3. berhasil",respone.data);
             //berhasil
             dispatch({
                 type:GET_LIST_KONTAK,
@@ -37,7 +37,7 @@ export const getListKontak = () =>{
             })
         })
         .catch((error)=>{
-            console.log ("3. gagal",error.message);
+            // console.log ("3. gagal",error.message);
             //gagal
             dispatch({
                 type:GET_LIST_KONTAK,
@@ -53,7 +53,7 @@ export const getListKontak = () =>{
 
 
 
-export const addKontak = () =>{
+export const addKontak = (data) =>{
     console.log("2. masuk action")
     return(dispatch) =>{
 
@@ -68,7 +68,7 @@ export const addKontak = () =>{
     })
         //kirim data ke Api
         axios ({
-            method:'post',
+            method:'POST',
             url:'http://localhost:3000/kontaks',
             timeout:12000,
             data : data

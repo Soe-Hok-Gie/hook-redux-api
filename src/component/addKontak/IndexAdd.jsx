@@ -1,6 +1,8 @@
 import React , { useState }from 'react'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
+import { addKontak } from '../../action/KontakAction';
+
 
 
 const Container = styled.div``;
@@ -27,7 +29,7 @@ const IndexAdd = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        console.log ("1. masuk hendlesubmit")
         dispatch (addKontak({nama: nama, nohp : nohp}))
      }
 
