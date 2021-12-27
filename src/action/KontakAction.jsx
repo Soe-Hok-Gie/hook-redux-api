@@ -1,6 +1,8 @@
 import axios from "axios";
 
 export const GET_LIST_KONTAK = "GET_LIST_KONTAK";
+export const ADD_KONTAK = "ADD_KONTAK";
+
 
 
 export const getListKontak = () =>{
