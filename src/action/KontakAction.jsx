@@ -50,3 +50,53 @@ export const getListKontak = () =>{
         })
     }
 }
+
+
+
+export const addKontak = () =>{
+    console.log("2. masuk action")
+    return(dispatch) =>{
+
+            //loading
+            dispatch({
+            type:ADD_KONTAK,
+            payload:{
+                loading:true,
+                data:false,
+                errorMessage:false
+            }
+    })
+        //kirim data ke Api
+        axios ({
+            method:'post',
+            url:'http://localhost:3000/kontaks',
+            timeout:12000,
+            data : data
+        })
+        .then((respone)=>{
+            console.log ("3. berhasil",respone.data);
+            //berhasil
+            dispatch({
+                type:ADD_KONTAK,
+                payload:{
+                    loading:true,
+                    data:respone.data,
+                    errorMessage:false
+                }
+            })
+        })
+        .catch((error)=>{
+            console.log ("3. gagal",error.message);
+            //gagal
+            dispatch({
+                type:ADD_KONTAK,
+                payload:{
+                    loading:false,
+                    data:false,
+                    errorMessage:error.message
+                }
+            })
+        })
+    }
+}
+
