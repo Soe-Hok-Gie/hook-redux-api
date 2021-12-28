@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { getListKontak } from '../../action/KontakAction';
+import { getListKontak, deleteKontak } from '../../action/KontakAction';
 import { useDispatch, useSelector } from 'react-redux'
 
 
 const Container = styled.div``;
 const Title = styled.h4``;
+const Button = styled.button``;
+
 
 
 const IndexKontak = () => {
@@ -29,7 +31,9 @@ const IndexKontak = () => {
             {getListKontakResult ? (
                 getListKontakResult.map((kontak) => {
                     return (
-                        <p key={kontak.id}> {kontak.nama}-{kontak.nohp}</p>
+                        <p key={kontak.id}> {kontak.nama}-{kontak.nohp}
+                            <Button onClick={() => dispatch(deleteKontak(kontak.id))}>delete</Button>
+                        </p>
                     )
                 })
             ) : getListKontakLoading ? (
