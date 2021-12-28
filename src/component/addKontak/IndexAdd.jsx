@@ -1,7 +1,7 @@
-import React , { useState }from 'react'
+import React , { useEffect, useState }from 'react'
 import styled from 'styled-components'
-import { useDispatch } from 'react-redux'
-import { addKontak } from '../../action/KontakAction';
+import { useDispatch, useSelector} from 'react-redux'
+import { addKontak,getListKontak } from '../../action/KontakAction';
 
 
 
@@ -15,7 +15,8 @@ const Button = styled.button``;
 const IndexAdd = () => {
     const [nama, setNama] = useState("");
     const [nohp, setNohp] = useState("");
-
+ 
+    const {addKontakResult} = useSelector((state) => state.KontakReducer)
     const dispatch = useDispatch();
 
     // jika ada logika atau keperluan yg panjang pakek cara pertama
@@ -34,6 +35,11 @@ const IndexAdd = () => {
         dispatch (addKontak({nama: nama, nohp : nohp}))
      }
 
+    useEffect(() => {
+      if (addKontakResult) {
+        dispatch (getListKontak ()); 
+      }
+    }, [addKontakResult,dispatch])
 
     return (
         <Container>
