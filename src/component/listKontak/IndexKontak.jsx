@@ -12,7 +12,7 @@ const Button = styled.button``;
 
 const IndexKontak = () => {
 
-    const { getListKontakResult, getListKontakLoading, getListKontakError } = useSelector(state => state.KontakReducer)
+    const { getListKontakResult, getListKontakLoading, getListKontakError,deleteKontakResult} = useSelector(state => state.KontakReducer)
     const dispatch = useDispatch()
 
 
@@ -21,8 +21,6 @@ const IndexKontak = () => {
         //panggil action getListcontak
         // console.log("1. useEffect component DId Mount")
         dispatch(getListKontak());
-
-
     }, [dispatch])
 
     return (
