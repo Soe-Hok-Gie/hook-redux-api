@@ -54,7 +54,7 @@ export const getListKontak = () =>{
 
 
 export const addKontak = (data) =>{
-    console.log("2. masuk action")
+    // console.log("2. masuk action")
     return(dispatch) =>{
 
             //loading
@@ -74,7 +74,7 @@ export const addKontak = (data) =>{
             data : data
         })
         .then((respone)=>{
-            console.log ("3. berhasil",respone.data);
+            // console.log ("3. berhasil",respone.data);
             //berhasil
             dispatch({
                 type:ADD_KONTAK,
@@ -86,7 +86,7 @@ export const addKontak = (data) =>{
             })
         })
         .catch((error)=>{
-            console.log ("3. gagal",error.message);
+            // console.log ("3. gagal",error.message);
             //gagal
             dispatch({
                 type:ADD_KONTAK,
@@ -100,3 +100,48 @@ export const addKontak = (data) =>{
     }
 }
 
+export const deleteKontak = (id) =>{
+    console.log("2. masuk action")
+    return(dispatch) =>{
+
+            //loading
+            dispatch({
+            type:DELETE_KONTAK,
+            payload:{
+                loading:true,
+                data:false,
+                errorMessage:false
+            }
+    })
+        //kirim data ke Api
+        axios ({
+            method:'DELETE',
+            url:'http://localhost:3000/kontaks'+id,
+            timeout:12000,
+        })
+        .then((respone)=>{
+            console.log ("3. berhasil",respone.data);
+            //berhasil
+            dispatch({
+                type:DELETE_KONTAK,
+                payload:{
+                    loading:true,
+                    data:respone.data,
+                    errorMessage:false
+                }
+            })
+        })
+        .catch((error)=>{
+            console.log ("3. gagal",error.message);
+            //gagal
+            dispatch({
+                type:DELETE_KONTAK,
+                payload:{
+                    loading:false,
+                    data:false,
+                    errorMessage:error.message
+                }
+            })
+        })
+    }
+}
