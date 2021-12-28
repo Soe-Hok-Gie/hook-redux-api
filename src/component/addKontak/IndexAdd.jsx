@@ -37,7 +37,10 @@ const IndexAdd = () => {
 
     useEffect(() => {
       if (addKontakResult) {
+        console.log ('5. masuk component Did update')
         dispatch (getListKontak ()); 
+        setNama ('');
+        setNohp ('');
       }
     }, [addKontakResult,dispatch])
 
