@@ -116,7 +116,7 @@ export const deleteKontak = (id) =>{
         //kirim data ke Api
         axios ({
             method:'DELETE',
-            url:'http://localhost:3000/kontaks'+id,
+            url:'http://localhost:3000/kontaks/'+id,
             timeout:12000,
         })
         .then((respone)=>{
