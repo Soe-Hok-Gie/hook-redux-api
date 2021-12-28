@@ -1,4 +1,4 @@
-import {GET_LIST_KONTAK,ADD_KONTAK} from '../../action/KontakAction'
+import {GET_LIST_KONTAK,ADD_KONTAK,DELETE_KONTAK} from '../../action/KontakAction'
 
 
 const initialState ={
