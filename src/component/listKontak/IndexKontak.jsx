@@ -23,6 +23,13 @@ const IndexKontak = () => {
         dispatch(getListKontak());
     }, [dispatch])
 
+    useEffect(() => {
+        if (deleteKontakResult) {
+          console.log ('5. masuk component Did update')
+          dispatch (getListKontak ()); 
+        }
+      }, [deleteKontakResult,dispatch])
+
     return (
         <Container>
             <Title>list kontak </Title>
