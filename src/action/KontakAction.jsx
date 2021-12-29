@@ -3,7 +3,7 @@ import axios from "axios";
 export const GET_LIST_KONTAK = "GET_LIST_KONTAK";
 export const ADD_KONTAK = "ADD_KONTAK";
 export const DELETE_KONTAK = "DELETE_KONTAK";
-
+export const DETAIL_KONTAK = "DETAIL_KONTAK";
 
 export const getListKontak = () =>{
     // console.log("2. masuk action")
@@ -142,6 +142,16 @@ export const deleteKontak = (id) =>{
                     errorMessage:error.message
                 }
             })
+        })
+    }
+}
+export const detailKontak = (data) =>{
+    return(dispatch) =>{
+            dispatch({
+            type:DETAIL_KONTAK,
+            payload:{
+                data:data,
+            }
         })
     }
 }
