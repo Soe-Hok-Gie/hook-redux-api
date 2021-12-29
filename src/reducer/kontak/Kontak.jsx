@@ -1,4 +1,4 @@
-import {GET_LIST_KONTAK,ADD_KONTAK,DELETE_KONTAK} from '../../action/KontakAction'
+import {GET_LIST_KONTAK,ADD_KONTAK,DELETE_KONTAK,DETAIL_KONTAK} from '../../action/KontakAction'
 
 
 const initialState ={
@@ -12,7 +12,9 @@ const initialState ={
 
     deleteKontakResult : false,
     deleteKontakLoading : false,
-    deleteKontakError : false
+    deleteKontakError : false,
+
+    detailKontakResult : false
 }
 
 const kontak = ( state =initialState, action) =>{
