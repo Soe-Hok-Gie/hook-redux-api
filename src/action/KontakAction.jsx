@@ -171,7 +171,7 @@ export const updateKontak = (data) =>{
         //kirim data ke Api
         axios ({
             method:'PUT',
-            url:'http://localhost:3000/kontaks'+data.id,
+            url:'http://localhost:3000/kontaks/'+data.id,
             timeout:12000,
             data : data
         })
