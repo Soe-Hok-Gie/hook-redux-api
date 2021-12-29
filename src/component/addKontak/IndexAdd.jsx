@@ -33,18 +33,28 @@ const IndexAdd = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log ("1. masuk hendlesubmit")
+        // console.log ("1. masuk hendlesubmit")
         dispatch (addKontak({nama: nama, nohp : nohp}))
      }
 
     useEffect(() => {
       if (addKontakResult) {
-        console.log ('5. masuk component Did update')
+        // console.log ('5. masuk component Did update')
         dispatch (getListKontak ()); 
         setNama ('');
         setNohp ('');
       }
     }, [addKontakResult,dispatch])
+
+    useEffect(() => {
+        if (detailKontakResult) {
+          console.log ('5. masuk component Did update')
+          dispatch (getListKontak ()); 
+          setNama (detailKontakResult.nama);
+          setNohp (detailKontakResult.nohp);
+          setId (detailKontakResult.id)
+        }
+      }, [detailKontakResult,dispatch])
 
     return (
         <Container>
