@@ -9,8 +9,6 @@ const Title = styled.h4``;
 const Button = styled.button``;
 
 
-
-
 const IndexKontak = () => {
 
     const { getListKontakResult, getListKontakLoading, getListKontakError,deleteKontakResult} = useSelector(state => state.KontakReducer)

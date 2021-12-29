@@ -1,4 +1,4 @@
-import { GET_LIST_KONTAK, ADD_KONTAK, DELETE_KONTAK, DETAIL_KONTAK } from '../../action/KontakAction'
+import { GET_LIST_KONTAK, ADD_KONTAK, DELETE_KONTAK, DETAIL_KONTAK, UPDATE_KONTAK } from '../../action/KontakAction'
 
 
 const initialState = {
@@ -14,7 +14,11 @@ const initialState = {
     deleteKontakLoading: false,
     deleteKontakError: false,
 
-    detailKontakResult: false
+    detailKontakResult: false,
+
+    updateKontakResult: false,
+    upadateKontakLoading: false,
+    updateKontakError: false,
 }
 
 const kontak = (state = initialState, action) => {
@@ -44,10 +48,18 @@ const kontak = (state = initialState, action) => {
                 deleteKontakError: action.payload.errormessage
             }
         case DETAIL_KONTAK:
-            console.log("4. masuk reduce :", action)
+            // console.log("4. masuk reduce :", action)
             return {
                 ...state,
                 detailKontakResult: action.payload.data
+            }
+        case UPDATE_KONTAK:
+            console.log("4. masuk reduce :", action)
+            return {
+                ...state,
+                updateKontakResult: action.payload.data,
+                upadateKontakLoading: action.payload.loading,
+                updateKontakError: action.payload.errormessage
             }
         default:
             return state;

@@ -1,7 +1,7 @@
 import React , { useEffect, useState }from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector} from 'react-redux'
-import { addKontak,getListKontak } from '../../action/KontakAction';
+import { addKontak,getListKontak, updateKontak } from '../../action/KontakAction';
 
 
 
@@ -33,10 +33,10 @@ const IndexAdd = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log ("1. masuk hendlesubmit")
+        console.log ("1. masuk hendlesubmit")
         if (id) {
         //update kontak
-        // dispatch (updateKontak({id: id, nama: nama, nohp : nohp}))
+        dispatch (updateKontak({id: id, nama: nama, nohp : nohp}))
     
         } else {
             //add kontak
