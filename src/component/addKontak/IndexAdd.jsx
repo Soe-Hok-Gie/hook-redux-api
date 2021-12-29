@@ -15,8 +15,10 @@ const Button = styled.button``;
 const IndexAdd = () => {
     const [nama, setNama] = useState("");
     const [nohp, setNohp] = useState("");
+    const [id, setId] = useState("");
+
  
-    const {addKontakResult} = useSelector((state) => state.KontakReducer)
+    const {addKontakResult,detailKontakResult} = useSelector((state) => state.KontakReducer)
     const dispatch = useDispatch();
 
     // jika ada logika atau keperluan yg panjang pakek cara pertama
