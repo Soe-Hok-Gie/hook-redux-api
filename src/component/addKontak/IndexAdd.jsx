@@ -69,6 +69,7 @@ const IndexAdd = () => {
       dispatch(getListKontak());
       setNama('');
       setNohp('');
+      setId('');
     }
   }, [updateKontakResult, dispatch])
 
@@ -81,7 +82,7 @@ const IndexAdd = () => {
                 <Button type="submit">Submit</Button>
             </Form> */}
 
-      <Title>Add Kontak</Title>
+      <Title> {id ? "edit Kontak" : "Add Kontak"}</Title>
       {/* //cara ke 2 apabila tidak ada logika yg panjang */}
       <Form onSubmit={(e) => handleSubmit(e)}>
         <Input type="text" name="nama" placeholder="Nama" value={nama} onChange={(e) => setNama(e.target.value)} />
