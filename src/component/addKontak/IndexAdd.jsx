@@ -34,7 +34,14 @@ const IndexAdd = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log ("1. masuk hendlesubmit")
-        dispatch (addKontak({nama: nama, nohp : nohp}))
+        if (id) {
+        //update kontak
+        // dispatch (updateKontak({id: id, nama: nama, nohp : nohp}))
+    
+        } else {
+            //add kontak
+            dispatch (addKontak({nama: nama, nohp : nohp}))
+        }
      }
 
     useEffect(() => {
