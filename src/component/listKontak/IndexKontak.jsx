@@ -5,8 +5,18 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 const Container = styled.div``;
-const Title = styled.h4``;
-const Button = styled.button``;
+const Title = styled.h4`
+  color: yellowgreen;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`;
+const Button = styled.button`
+    border-radius: 10px;
+    justify-content: space-between;
+`;
 
 
 const IndexKontak = () => {
