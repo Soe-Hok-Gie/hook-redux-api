@@ -15,7 +15,7 @@ const Title = styled.h4`
 `;
 const Button = styled.button`
     border-radius: 10px;
-    justify-content: space-between;
+    margin: 0 3px;
 `;
 
 

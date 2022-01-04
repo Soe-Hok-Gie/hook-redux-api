@@ -12,7 +12,9 @@ const Container = styled.div`
     background-color: whitesmoke;
 `;
 const Wrapper= styled.div`
+    border-radius: 10px;
     background-color: teal;
+    padding: 10px;
 `;
 const Title = styled.h1`
   font-weight: bold;
