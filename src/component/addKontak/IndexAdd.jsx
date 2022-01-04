@@ -9,15 +9,18 @@ const Container = styled.div`
   
 `;
 const Title = styled.h4`
-
+  margin-bottom: 5px;
 `;
 const Form = styled.form`
-
 `;
 const Input = styled.input`
-  
+  background-color: #eccfaa;
+  border-radius: 10px;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+    border-radius: 10px;
+    background-color: crimson;
+`;
 
 
 const IndexAdd = () => {
