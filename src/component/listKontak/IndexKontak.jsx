@@ -15,7 +15,7 @@ const Title = styled.h4`
 `;
 const Button = styled.button`
     border-radius: 10px;
-    margin: 0 3px;
+    margin: 0 5px;
 `;
 
 

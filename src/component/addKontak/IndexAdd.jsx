@@ -5,17 +5,15 @@ import { addKontak, getListKontak, updateKontak } from '../../action/KontakActio
 
 
 
-const Container = styled.div`
-  
+const Container = styled.div``;
+const Title = styled.h3`
+    margin-bottom: 4px;
+
 `;
-const Title = styled.h4`
-  margin-bottom: 5px;
-`;
-const Form = styled.form`
-`;
+const Form = styled.form``;
 const Input = styled.input`
-  background-color: #eccfaa;
-  border-radius: 10px;
+    border-radius: 10px;
+    background-color: #f1d3ab;
 `;
 const Button = styled.button`
     border-radius: 10px;
