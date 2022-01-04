@@ -7,8 +7,7 @@ import { addKontak, getListKontak, updateKontak } from '../../action/KontakActio
 
 const Container = styled.div``;
 const Title = styled.h3`
-    margin-bottom: 4px;
-
+    margin-bottom: 5px;
 `;
 const Form = styled.form``;
 const Input = styled.input`
