@@ -3,17 +3,36 @@ import styled from 'styled-components'
 import IndexKontak from './component/listKontak/IndexKontak'
 import IndexAdd from './component/addKontak/IndexAdd';
 
-const Container = styled.div``;
-const Title = styled.h1``;
+const Container = styled.div`
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+`;
+const Wrapper= styled.div`
+    background-color: teal;
+`;
+const Title = styled.h1`
+  font-weight: bold;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+`;
 
 const App = () => {
   return (
     <Container>
-      <Title>aplikasi kontak App </Title>
+      <Wrapper>
+      <Title>Kontak App</Title>
       <br></br>
       <IndexAdd/>
       <br></br>
       <IndexKontak/>
+      </Wrapper>
     </Container>
   )
 }

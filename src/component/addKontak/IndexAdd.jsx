@@ -5,10 +5,18 @@ import { addKontak, getListKontak, updateKontak } from '../../action/KontakActio
 
 
 
-const Container = styled.div``;
-const Title = styled.h4``;
-const Form = styled.form``;
-const Input = styled.input``;
+const Container = styled.div`
+  
+`;
+const Title = styled.h4`
+
+`;
+const Form = styled.form`
+
+`;
+const Input = styled.input`
+  
+`;
 const Button = styled.button``;
 
 
